@@ -6,110 +6,231 @@ paragraph grey: #5b5e6d;
 nav grey: #5b5e6d;
 */
 
-/* Extra small */
+$ample-boto: 18em;
+$alt-boto: 3em;
 
+$color-titols: #323747;
+$color-text: #5b5e6c;
+
+/* Extra small < 767px */
 @media (max-width: 768px) {
   body {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    background-color: rgb(216, 135, 135);
-    /* debug */
-  }
-  body > nav {
-    display: flex;
-    position: sticky;
-    justify-content: space-evenly;
-    top: 0;
-    width: 100%;
-    height: 9em;
-    padding: 0 1em;
-    background-color: white;
-    border-bottom: 0.2em solid #ebeaeb;
-  }
-
-  nav {
-    /*bloc de nav*/
-    img {
-      width: 12em;
-      height: 7em;
-      margin-top: 1em;
-      margin-left: 0.5em;
-      margin-right: 5em;
-    }
-    .fa-bars {
-      display: flex;
-      justify-items: flex-end;
-      margin-top: 1em;
-      font-size: 50px;
-      color: #6d6d6d;
-    }
-    ul {
-      visibility: hidden;
-    }
-
-    .fa-times {
-      visibility: hidden;
-    }
-    /*
-  ul {
-      display: flex;
-      flex-direction: column;
-  }
-*/
-  }
-
-  /*bloc de header*/
-  header {
-    display: flex;
-    flex-flow: column;
-    justify-items: center;
     width: 100vw;
 
-    h1 {
-      font-size: 50px;
-      width: 10em;
-      margin: 1em;
-      font-weight: bold;
-    }
-    p {
+    /* Bloc de nav */
+    nav {
       display: flex;
-      width: 20em;
-      font-size: 24px;
-      margin-left: 2.2em;
-      margin-bottom: 2em;
-      line-height: 1.5em;
+      position: sticky;
+      justify-content: space-evenly;
+      top: 0;
+      width: 100vw;
+      height: 9em;
+      padding: 0 1em;
+      background-color: white;
+      border-bottom: 0.2em solid #ebeaeb;
+
+      /*bloc de nav*/
+      img {
+        width: 12em;
+        height: 7em;
+        margin-top: 1em;
+        margin-left: 0.5em;
+        margin-right: 5em;
+      }
+      .fa-bars {
+        display: flex;
+        justify-items: flex-end;
+        margin-top: 1em;
+        font-size: 50px;
+        color: #6d6d6d;
+      }
+      ul {
+        visibility: hidden;
+      }
+
+      .fa-times {
+        visibility: hidden;
+      }
     }
 
-   #using_slack_text{
-     margin-top: 1em;
-     font-weight:unset;
-    color:#8F919A;
-    font-size: 25px;
-   }
-
-    input {
+    /* Bloc de header */
+    header {
       display: flex;
+      flex-flow: column;
       align-items: center;
-      width: 19.5em;
-      height: 3.5em;
-      margin-left: 2.3em;
-      font-size: 23px;
-    }
-    button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 1em;
-      margin-left: 2.1em;
-      width: 18.7em;
-      height: 3em;
-      background-color: #4049AA;
-      color: white;
-      font-size: 25px;
-      font-weight: 600;
-      border-style: none;
-      border-radius: 0.2em;
+      width: 100vw;
+
+      h1 {
+        display: flex;
+        text-align: center;
+        font-size: 50px;
+        width: 10em;
+        margin-top: 1em;
+        font-weight: bold;
+        color: $color-titols;
+      }
+
+      p {
+        display: flex;
+        text-align: center;
+        width: 20em;
+        font-size: 24px;
+        margin: 1em 0em 2em 0em;
+        line-height: 1.5em;
+        color: $color-text;
+      }
+
+      #using_slack_text {
+        display: flex;
+        justify-content: center;
+        margin-top: 1em;
+        font-weight: unset;
+        color: #48494e;
+        font-size: 20px;
+
+        a {
+          margin-left: 0.5em;
+        }
+      }
+
+      input {
+        display: flex;
+        border-radius: 0.2em;
+        padding-left: 1em;
+        justify-content: center;
+        align-items: center;
+        width: 18.5em;
+        height: 3.5em;
+        font-size: 23px;
+        border-style: none;
+        border: 0.1em solid #ebebeb;
+      }
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+        width: $ample-boto;
+        height: $alt-boto;
+        background-color: #4049aa;
+        color: white;
+        font-size: 25px;
+        font-weight: 600;
+        border-style: none;
+        border-radius: 0.2em;
+      }
+
+      img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 25em;
+        max-width: 40em;
+        width: 100%;
+      }
     }
 
+    /* Bloc del main */
+    main {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      width: 100vw;
+      background-color: #f5f5f5;
+
+
+      button:nth-child(1) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $ample-boto;
+        height: $alt-boto;
+        margin-bottom: 1.5em;
+        /* background-color: white; */
+        color: #4049aa;
+        font-size: 25px;
+        font-weight: 600;
+        border-style: none;
+        border-radius: 0.2em;
+        border: 0.1em solid #4049aa;
+        background-color: red;
+      }
+
+
+
+
+      div {
+        display: flex;
+        flex-flow: column;
+        align-content: center;
+        align-items: center;
+
+        h1 {
+          display: flex;
+          align-content: center;
+          margin-top: 2em;
+          font-size: 35px;
+          font-weight: 600;
+          color: $color-titols;
+        }
+
+        p {
+          display: flex;
+          align-content: center;
+          text-align: center;
+          margin: 2em 0em 3em 0em;
+          width: 20em;
+          line-height: 1.5em;
+          font-size: 23px;
+          color: $color-text;
+        }
+
+
+        img {
+          display: flex;
+          align-content: center;
+          align-items: center;
+          width: 17em;
+          margin: 2em 0em 2em 0em;
+          padding-bottom: 4em;
+          border-bottom: 0.2em solid #ebebeb;
+        }
+
+        input {
+          display: flex;
+          border-radius: 0.2em;
+          padding-left: 1em;
+          justify-content: center;
+          align-items: center;
+          width: 18.5em;
+          height: 3.5em;
+          font-size: 23px;
+          border-style: none;
+          border: 0.1em solid #ebebeb;
+          margin-bottom: 2em;
+        }
+
+      }
+    }
+
+    /*  Bloc de footer  */
+    footer {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      width: 100vw;
+
+      
+    }
   }
 }
+
+/* Small >= 767px &&  < 961px */
+
+/* Medium >= 961px &&  < 1024px */
+
+/* Large >= 1024px */
